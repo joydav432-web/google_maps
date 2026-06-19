@@ -118,14 +118,21 @@ class _MapScreenState extends State<MapScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       appBar: AppBar(title: const Text("Live Location Tracker")),
       body: currentPosition == null
           ? const Center(child: CircularProgressIndicator())
           : GoogleMap(
+
+
         initialCameraPosition: CameraPosition(
           target: currentPosition!,
           zoom: 16,
         ),
+
+
+
         markers: markers,
         polylines: polylines,
         myLocationEnabled: true,
